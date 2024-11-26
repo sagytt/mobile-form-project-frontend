@@ -1,0 +1,323 @@
+/* ***** Common Css **** */
+
+:root {
+    scroll-behavior: initial;
+    --font:"Assistant", sans-serif;
+    --white:#fff;
+    --black:#000;
+    --blue: #00D6D1;
+    --red:#FF3939;
+    --success:#00D6D1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style: none;
+}
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+}
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+}
+img {
+    display: block;
+}
+figure{margin: 0;}
+a,button {
+    transition: 0.4s linear;
+    -webkit-transition: 0.4s linear;
+    text-decoration: none;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+body {
+    font-family:var(--font);
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--black);
+    text-decoration: none;
+}
+.main-wrpper {    
+    width: 430px;
+    height: 100vh;
+    overflow: auto;
+    background:var(--black);
+    position: relative;
+    margin: 0 auto;
+}
+select option{
+    background: #fff;
+    color: #000;
+}
+select>option:hover{
+    background: #E3FDFD;
+}
+option:hover {
+    background-color: #000;
+}
+select:focus>option:checked {
+    background: #E3FDFD !important;
+}
+/* ***** End Common Css **** */
+
+/* ***** Proposal Form Page ***** */
+header{
+    padding: 10px 20px;
+    background: var(--blue);
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    z-index: 120;
+}
+.btn-close{
+    width: 20px;
+}
+.btn-close img{
+    width: 20px;
+}
+.btn-close:hover{
+    opacity: 0.60;
+}
+
+.inner-form{
+    padding: 20px;
+}
+.inner-form h1{
+    font-size: 32px;
+    font-weight: normal;
+    color: var(--white);
+    text-align: center;
+    line-height: 32px;
+    margin: 0 auto 10px;
+}
+.inner-form h2{
+    font-size: 24px;
+    font-weight: normal;
+    color: var(--white);
+    text-align: center;
+    line-height: 24px;
+    margin: 0 auto 20px;
+}
+.inner-form h6{
+    font-size: 14px;
+    font-weight: normal;
+    color: var(--white);
+    line-height: 16px;
+    margin: 0 0 30px;
+}
+.inner-form .form-group{
+    margin: 0 0 25px;
+    width: 100%;
+    position: relative;
+}
+.inner-form .form-group .form-control{
+    padding: 0 15px 15px 35px;
+    background-color: #000;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    border-bottom: 1px solid var(--white);
+    height: auto;
+    font-size: 24px;
+    font-weight: normal;
+    color: var(--white);
+    width: 100%;
+    display: block;
+    outline: none !important;
+}
+.inner-form .form-group.error-bx .form-control{
+    border-bottom: 1px solid var(--red);
+}
+.inner-form .form-group.valid-bx .form-control{
+    border-bottom: 1px solid var(--success);
+}
+img.chackic{
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    display: none;
+}
+.inner-form .form-group.valid-bx img.chackic{
+    display: block;
+}
+
+.inner-form .form-group .form-control::placeholder{
+    color: var(--white);
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button{
+    webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.inner-form .form-group select.form-control{
+    -webkit-appearance: none;
+    background-image: url('../images/down-ic.svg');
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: center left 15px;
+}
+.inner-form .form-group h6{
+    display: block;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--white);
+    padding: 0 15px;
+}
+.inner-form .form-group label{
+    display: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--red);
+    line-height: 22px;
+    margin: 0;
+    padding: 0 15px;
+}
+.inner-form .form-group.error-bx label{
+    display: block;
+} 
+
+.custom-box{
+    margin: 0 0 40px;
+}
+.inner-form .styled-checkbox {
+    position: absolute;
+    opacity: 0;
+}
+.inner-form .styled-checkbox + label {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    color: var(--white);
+    line-height: 16px;
+    display: flex;
+}
+.inner-form .styled-checkbox + label:before {
+    content: "";
+    margin: 5px 0 0 10px;
+    display: inline-block;
+    vertical-align: text-top;
+    min-width: 15px;
+    width: 15px;
+    height: 15px;
+    background: var(--black);
+    border: 1px solid var(--white);
+}
+.inner-form .styled-checkbox:checked + label:after {
+    content: "";
+    position: absolute;
+    right:11px;
+    top: 12px;
+    background: var(--white);
+    width: 2px;
+    height: 2px;
+    box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+    transform: rotate(45deg);
+}
+
+.inner-form .btn-group{
+    display: block;
+}
+.btn-primary{
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--black);
+    text-align: center;
+    border: none;
+    padding: 16px 26px;
+    background: var(--blue);
+    border-radius: 10px;
+    margin: 0 0 20px;
+    cursor: pointer;
+}
+.btn-primary:hover{
+    background: var(--white);
+    color: var(--blue);
+}
+.btn-secondary{
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--white);
+    text-align: center;
+    border: 2px solid var(--white);
+    padding: 14px 26px;
+    background: #000;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.btn-secondary:hover{
+    background: var(--white);
+    color: var(--blue);
+}
+/* ***** End Proposal Form Page ***** */
+
+/* ***** Thank You Page ***** */
+.social-connect-box{
+    padding: 150px 20px;
+    position: fixed;
+    max-width: 430px;
+    width: 100%;
+    height: 100%;
+    background: var(--black);
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 10;
+    display: none;
+}
+.social-connect-box.success-state{
+    display: block;
+}
+.social-connect-box h2{
+    font-size: 32px;
+    font-weight: normal;
+    color: var(--white);
+    text-align: center;
+    line-height: 32px;
+    margin: 0 auto 10px;
+}
+.social-connect-box p{
+    font-size: 24px;
+    font-weight: normal;
+    color: var(--white);
+    line-height: 24px;
+    text-align: center;
+    margin: 0 auto 40px;
+}
+.social-bx{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.social-bx a{
+    margin-left: 20px;
+}
+.social-bx a:last-child{
+    margin: 0;
+}
+.social-bx a:hover{
+    opacity: .50;
+}
+/* ***** End Thank You Page ***** */
